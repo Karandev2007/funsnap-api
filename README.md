@@ -7,7 +7,7 @@ LumiAPI serves random jokes, quotes, facts, and images. Get inspired, entertaine
 
 BaseURL: `https://funsnap-api.onrender.com`
 
-### **1. `/cat`, `/dog` **
+### **1. `/cat`, `/dog`**
 Fetch a random image of a specific category (dog, cat, panda, etc.).
 
 - **Method**: `GET`
