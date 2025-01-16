@@ -7,12 +7,14 @@ const PORT = 3000
 const imageRoutes = require('./routes/images')
 const jokeRoutes = require('./routes/jokes')
 const quoteRoutes = require('./routes/quotes')
+const factRoutes = require('./routes/facts')
 
 // all routes together
-app.use('/v1', imageRoutes, jokeRoutes, quoteRoutes)
+const routes = [jokeRoutes, quoteRoutes, factRoutes, imageRoutes]
+routes.forEach(route => app.use('/', route))
 
-// static server for images
-app.use('/images', express.static(path.join(__dirname, 'images')))
+// Serve static images so the URLs work
+app.use('/images', express.static(path.join(__dirname, 'images')));
 
 app.listen(PORT, () => {
     console.log('server started: https://funsnap-api.onrender.com')
