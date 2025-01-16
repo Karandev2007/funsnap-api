@@ -111,4 +111,4 @@ All API responses follow a similar format with a category field, the requested c
 
 ---
 
-Feel free to contribute or suggest new features by submitting an issue or a pull request. We hope you enjoy LumiAPI and stay tuned for updates!
+Feel free to contribute or suggest new features by submitting an [issue](https://github.com/Karandev2007/lumi-api/issues) or a [pull request](https://github.com/Karandev2007/lumi-api/pulls). We hope you enjoy LumiAPI and stay tuned for updates!
