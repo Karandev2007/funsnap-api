@@ -6,7 +6,7 @@ const router = express.Router()
 // load quotes json
 router.get('/quote', (req, res) => {
     const startTime = Date.now()  // get response time
-    const quotesPath = path.join(__dirname, '../assets/quotes.json')
+    const quotesPath = path.join(__dirname, '../data/quotes.json')
     const quotesData = JSON.parse(fs.readFileSync(quotesPath, 'utf-8'))
     const randomQuote = quotesData[Math.floor(Math.random() * quotesData.length)]  // pick a random quote
 
