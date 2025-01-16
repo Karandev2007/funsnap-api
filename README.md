@@ -1,6 +1,6 @@
-# Joke, Quote, and Image API
+# LumiAPI API
 
-A simple API that serves random jokes, quotes, and images, more updates in future.
+A simple API that serves random jokes, quotes, facts and images, more updates in future.
 
 ---
 
@@ -26,7 +26,7 @@ Fetch a random image URL from the specified category.
 
 ---
 
-### **2. `/v1/quote`**
+### **2. `/quote`**
 Fetch a random quote.
 
 - **Method**: `GET`
@@ -41,7 +41,7 @@ Fetch a random quote.
 
 ---
 
-### **3. `/v1/joke`**
+### **3. `/joke`**
 Fetch a random joke.
 
 - **Method**: `GET`
@@ -50,6 +50,21 @@ Fetch a random joke.
     {
         "category": "joke",
         "joke": "I used to play piano by ear, but now I use my hands.",
+        "response_time": "3ms"
+    }
+    ```
+
+---
+
+### **3. `/fact`**
+Fetch a random fact.
+
+- **Method**: `GET`
+- **Response Example**:
+    ```json
+    {
+        "category": "fact",
+        "fact": "The shortest war lasted only 38 minutes between Britain and Zanzibar in 1896.",
         "response_time": "3ms"
     }
     ```
