@@ -13,7 +13,7 @@ const factRoutes = require('./routes/facts')
 const routes = [jokeRoutes, quoteRoutes, factRoutes, imageRoutes]
 routes.forEach(route => app.use('/', route))
 
-// Serve static images so the URLs work
+// serve images
 app.use('/images', express.static(path.join(__dirname, 'images')));
 
 app.get('/', (req, res) => {
