@@ -1,17 +1,17 @@
 # LumiAPI API
 
-A simple API that serves random jokes, quotes, facts and images, more updates in future.
-
+LumiAPI serves random jokes, quotes, facts, and images. Get inspired, entertained, and informed, all in one place. More updates and features are coming soon!
 ---
 
 ## Endpoints
-Base URL: `https://funsnap-api.onrender.com`
 
-### **1. `/v1/images/:category`**
-Fetch a random image URL from the specified category.
+BaseURL: `https://funsnap-api.onrender.com`
+
+### **1. `/image/:category`**
+Fetch a random image of a specific category (dog, cat, panda, etc.).
 
 - **Method**: `GET`
-- **URL Parameters**: 
+- **URL Parameters**:
     - `category` (Required): The category of the image (e.g., `dogs`, `cats`, `panda`).
 - **Response Example**:
     ```json
@@ -21,7 +21,6 @@ Fetch a random image URL from the specified category.
         "response_time": "5ms"
     }
     ```
-
 - **Categories Available**: `dog`, `cats`, `panda` (Images are stored in respective folders like `/images/dog`, `/images/cats`, etc.).
 
 ---
@@ -56,7 +55,7 @@ Fetch a random joke.
 
 ---
 
-### **3. `/fact`**
+### **4. `/fact`**
 Fetch a random fact.
 
 - **Method**: `GET`
@@ -68,3 +67,47 @@ Fetch a random fact.
         "response_time": "3ms"
     }
     ```
+
+---
+
+## Categories Available
+
+- **Images**: `dog`, `cat`, `panda` (Images are stored in respective folders like `/images/dog`, `/images/cat`, `/images/panda`).
+- **Jokes, Quotes, and Facts**: These endpoints fetch random data from predefined collections.
+
+---
+
+## Response Format
+
+All API responses follow a similar format with a category field, the requested content (quote, joke, image URL, etc.), and the response time in milliseconds.
+
+### General Response Format:
+```json
+{
+    "category": "category_name",
+    "content": "content_here",
+    "response_time": "Xms"
+}
+```
+
+---
+
+### Example API Response for **`/joke`**:
+```json
+{
+    "category": "joke",
+    "joke": "I used to play piano by ear, but now I use my hands.",
+    "response_time": "3ms"
+}
+```
+
+---
+
+## Future Updates
+
+- Text To Speech
+- new filters and more categories in jokes, facts and images.
+
+---
+
+Feel free to contribute or suggest new features by submitting an issue or a pull request. We hope you enjoy LumiAPI and stay tuned for updates!

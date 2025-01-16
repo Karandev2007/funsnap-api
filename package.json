@@ -1,7 +1,7 @@
 {
-  "name": "funsnap-api",
+  "name": "lumi-api",
   "version": "1.0.0",
-  "description": "api that serves animal images, jokes, quotes and more in future.",
+  "description": "api that serves animal images, jokes, quotes, facts and more in future.",
   "main": "server.js",
   "dependencies": {
     "accepts": "^1.3.8",
@@ -79,7 +79,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Karandev2007/funsnap-api.git"
+    "url": "git+https://github.com/Karandev2007/lumi-api.git"
   },
   "keywords": [
     "api"
@@ -87,7 +87,7 @@
   "author": "Karandev2007",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Karandev2007/funsnap-api/issues"
+    "url": "https://github.com/Karandev2007/lumi-api/issues"
   },
-  "homepage": "https://github.com/Karandev2007/funsnap-api#readme"
+  "homepage": "https://github.com/Karandev2007/lumi-api#readme"
 }
