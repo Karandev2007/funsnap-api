@@ -16,6 +16,10 @@ routes.forEach(route => app.use('/', route))
 // Serve static images so the URLs work
 app.use('/images', express.static(path.join(__dirname, 'images')));
 
+app.get('/', (req, res) => {
+    res.send('<h2>Welcome to LumiAPI</h2><p>Check out the source code & documentation on <a href="https://github.com/Karandev2007/lumi-api">GitHub</a></p>');
+});
+
 app.listen(PORT, () => {
     console.log('server started: https://funsnap-api.onrender.com')
 })
