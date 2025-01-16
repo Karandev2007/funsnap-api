@@ -21,7 +21,7 @@ router.get('/images/:category', (req, res) => {
 
         // get a random image
         const randomImage = files[Math.floor(Math.random() * files.length)]
-        const imageUrl = `Base URL: https://funsnap-api.onrender.com/images/${category}/${randomImage}`
+        const imageUrl = `https://funsnap-api.onrender.com/images/${category}/${randomImage}`
         res.json({
             category: category, 
             url: imageUrl, 

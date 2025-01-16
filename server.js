@@ -15,5 +15,5 @@ app.use('/v1', imageRoutes, jokeRoutes, quoteRoutes)
 app.use('/images', express.static(path.join(__dirname, 'images')))
 
 app.listen(PORT, () => {
-    console.log('server started')
+    console.log('server started: https://funsnap-api.onrender.com')
 })
