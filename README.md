@@ -1,4 +1,4 @@
-# LumiAPI API
+# LumiAPI
 
 LumiAPI serves random jokes, quotes, facts, and images. Get inspired, entertained, and informed, all in one place. More updates and features are coming soon!
 ---
@@ -7,7 +7,7 @@ LumiAPI serves random jokes, quotes, facts, and images. Get inspired, entertaine
 
 BaseURL: `https://funsnap-api.onrender.com`
 
-### **1. `/image/:category`**
+### **1. `/cat`, `/dog` **
 Fetch a random image of a specific category (dog, cat, panda, etc.).
 
 - **Method**: `GET`
