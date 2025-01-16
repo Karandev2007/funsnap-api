@@ -6,7 +6,7 @@ More updates and features are coming soon!
 
 ## Endpoints
 
-BaseURL: `https://funsnap-api.onrender.com`
+BaseURL: `https://lumi-api-id0f.onrender.com`
 
 ### **1. images - `/cat`, `/dog`**
 Fetch a random image of a specific category (dog, cat, panda, etc.).
@@ -18,7 +18,7 @@ Fetch a random image of a specific category (dog, cat, panda, etc.).
     ```json
     {
         "category": "dog",
-        "url": "https://funsnap-api.onrender.com/images/dog/dNW2yRh3RO.png",
+        "url": "https://lumi-api-id0f.onrender.com/images/dog/dNW2yRh3RO.png",
         "response_time": "5ms"
     }
     ```
