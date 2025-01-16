@@ -5,6 +5,7 @@ A simple API that serves random jokes, quotes, and images, more updates in futur
 ---
 
 ## Endpoints
+Base URL: `https://funsnap-api.onrender.com`
 
 ### **1. `/v1/images/:category`**
 Fetch a random image URL from the specified category.
@@ -16,7 +17,7 @@ Fetch a random image URL from the specified category.
     ```json
     {
         "category": "dog",
-        "url": "http://localhost:3000/images/dog/dNW2yRh3RO.png",
+        "url": "https://funsnap-api.onrender.com/images/dog/dNW2yRh3RO.png",
         "response_time": "5ms"
     }
     ```
