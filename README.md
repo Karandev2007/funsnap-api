@@ -84,7 +84,7 @@ Get an interesting random fact.
 `GET /v1/fact`
 
 **Example Request URL:**  
-`https://api.qeintech.in/fact`
+`https://api.qeintech.in/v1/fact`
 
 **Response (JSON):**  
 ```json
