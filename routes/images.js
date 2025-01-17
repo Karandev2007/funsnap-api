@@ -4,7 +4,7 @@ const path = require('path')
 const router = express.Router()
 
 // returns a random image url from the folder
-router.get('/:category', (req, res) => {
+router.get('/v1/image/:category', (req, res) => {
     const startTime = Date.now()
     const category = req.params.category
     const folderPath = path.join(__dirname, '../images', category)
@@ -21,7 +21,7 @@ router.get('/:category', (req, res) => {
 
         // get a random image
         const randomImage = files[Math.floor(Math.random() * files.length)]
-        const imageUrl = `https://funsnap-api.onrender.com/images/${category}/${randomImage}`
+        const imageUrl = `https://api.qeintech.in/images/${category}/${randomImage}`
         
         res.json({
             category: category, 

@@ -1,114 +1,112 @@
 # LumiAPI
 
-LumiAPI serves random jokes, quotes, facts, and images. Get inspired, entertained, and informed, all in one place. 
-More updates and features are coming soon!
----
+LumiAPI is an open-sourced, fast, and reliable API for developers to easily integrate text-to-speech, jokes, quotes, facts, and image retrieval into their applications. 
 
-## Endpoints
-
-BaseURL: `https://lumi-api-id0f.onrender.com`
-
-### **1. images - `/cat`, `/dog`**
-Fetch a random image of a specific category (dog, cat, panda, etc.).
-
-- **Method**: `GET`
-- **URL Parameters**:
-    - `category` (Required): The category of the image (e.g., `dogs`, `cats`, `panda`).
-- **Response Example**:
-    ```json
-    {
-        "category": "dog",
-        "url": "https://lumi-api-id0f.onrender.com/images/dog/dNW2yRh3RO.png",
-        "response_time": "5ms"
-    }
-    ```
-- **Categories Available**: `dog`, `cats`, `panda` (Images are stored in respective folders like `/images/dog`, `/images/cats`, etc.).
+Base URL:  
+`https://api.qeintech.in`
 
 ---
 
-### **2. `/quote`**
-Fetch a random quote.
+## 🚀 API Endpoints
 
-- **Method**: `GET`
-- **Response Example**:
-    ```json
-    {
-        "category": "quote",
-        "quote": "I have an existential fear of maps.",
-        "response_time": "2ms"
-    }
-    ```
+### 1. **Text-to-Speech**  
+Convert text into speech and get the audio file.
 
----
+**Endpoint:**  
+`POST /v1/text2speech`  
 
-### **3. `/joke`**
-Fetch a random joke.
-
-- **Method**: `GET`
-- **Response Example**:
-    ```json
-    {
-        "category": "joke",
-        "joke": "I used to play piano by ear, but now I use my hands.",
-        "response_time": "3ms"
-    }
-    ```
-
----
-
-### **4. `/fact`**
-Fetch a random fact.
-
-- **Method**: `GET`
-- **Response Example**:
-    ```json
-    {
-        "category": "fact",
-        "fact": "The shortest war lasted only 38 minutes between Britain and Zanzibar in 1896.",
-        "response_time": "3ms"
-    }
-    ```
-
----
-
-## Categories Available
-
-- **Images**: `dog`, `cat`, `panda` (Images are stored in respective folders like `/images/dog`, `/images/cat`, `/images/panda`).
-- **Jokes, Quotes, and Facts**: These endpoints fetch random data from predefined collections.
-
----
-
-## Response Format
-
-All API responses follow a similar format with a category field, the requested content (quote, joke, image URL, etc.), and the response time in milliseconds.
-
-### General Response Format:
+**Request Body (JSON):**  
 ```json
 {
-    "category": "category_name",
-    "content": "content_here",
-    "response_time": "Xms"
+  "text": "Your text here"
+}
+```
+
+**Example Request URL:**  
+`https://api.qeintech.in/v1/text2speech`
+
+**Response (JSON):**  
+```json
+{
+  "message": "Text-to-speech conversion successful",
+  "audio_url": "https://api.qeintech.in/audio/e2231f8563711fe42f09f0f333870589.mp3"
 }
 ```
 
 ---
 
-### Example API Response for **`/joke`**:
+### 2. **Random Joke**  
+Get a random joke to spice up your app.
+
+**Endpoint:**  
+`GET /v1/joke`
+
+**Example Request URL:**  
+`https://api.qeintech.in/v1/joke`
+
+**Response (JSON):**  
 ```json
 {
-    "category": "joke",
-    "joke": "I used to play piano by ear, but now I use my hands.",
-    "response_time": "3ms"
+  "category": "joke",
+  "joke": "I told my wife she was getting too emotional, so she threw a cup of tea at me. It was steeped in emotion",
+  "response_time": "1ms"
 }
 ```
 
 ---
 
-## Future Updates
+### 3. **Random Quote**  
+Fetch a random motivational or insightful quote.
 
-- Text To Speech
-- new filters and more categories in jokes, facts and images.
+**Endpoint:**  
+`GET /v1/quote`
+
+**Example Request URL:**  
+`https://api.qeintech.in/v1/quote`
+
+**Response (JSON):**  
+```json
+{
+  "category": "quote",
+  "quote": "Don’t worry if plan A doesn’t work. There are 25 more letters in the alphabet.",
+  "response_time": "1ms"
+}
+```
 
 ---
 
-Feel free to contribute or suggest new features by submitting an [issue](https://github.com/Karandev2007/lumi-api/issues) or a [pull request](https://github.com/Karandev2007/lumi-api/pulls). We hope you enjoy LumiAPI and stay tuned for updates!
+### 4. **Random Fact**  
+Get an interesting random fact.
+
+**Endpoint:**  
+`GET /v1/fact`
+
+**Example Request URL:**  
+`https://api.qeintech.in/fact`
+
+**Response (JSON):**  
+```json
+{
+  "fact": "The average person walks the equivalent of five times around the Earth in a lifetime."
+}
+```
+
+---
+
+### 5. **Random Image**  
+Get a random image from a specified category.
+
+**Endpoint:**  
+`GET /v1/image/:category`
+
+**Example Request URL:**  
+`https://api.qeintech.in/v1/image/cat`
+
+**Response (JSON):**  
+```json
+{
+  "category": "cat",
+  "url": "https://api.qeintech.in/images/cat/ac6.jpg",
+  "response_time": "4ms"
+}
+```

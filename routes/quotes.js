@@ -4,7 +4,7 @@ const path = require('path')
 const router = express.Router()
 
 // load quotes json
-router.get('/quote', (req, res) => {
+router.get('/v1/quote', (req, res) => {
     const startTime = Date.now()  // get response time
     const quotesPath = path.join(__dirname, '../data/quotes.json')
     const quotesData = JSON.parse(fs.readFileSync(quotesPath, 'utf-8'))

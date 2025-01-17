@@ -4,7 +4,7 @@ const path = require('path')
 const router = express.Router()
 
 // load jokes json
-router.get('/joke', (req, res) => {
+router.get('/v1/joke', (req, res) => {
     const startTime = Date.now()  // get response time
     const jokesPath = path.join(__dirname, '../data/jokes.json')
     const jokesData = JSON.parse(fs.readFileSync(jokesPath, 'utf-8'))
