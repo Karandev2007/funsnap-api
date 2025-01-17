@@ -1,4 +1,4 @@
-![LumiAPI](https://example.com/image.png](https://iili.io/2PfHIf4.md.png)
+![LumiAPI](https://iili.io/2PfHIf4.md.png)
 
 # LumiAPI
 
