@@ -112,3 +112,122 @@ Get a random image from a specified category.
   "response_time": "4ms"
 }
 ```
+Here are the **new API routes** for the additional features added to LumiAPI:  
+
+---
+
+### **6. GitHub User Information**  
+Retrieve details about a GitHub user.  
+
+**Endpoint:**  
+`GET /v1/github?username={username}`  
+
+**Example Request URL:**  
+`https://api.qeintech.in/v1/github?username=octocat`  
+
+**Response (JSON):**  
+```json
+{
+  "success": true,
+  "name": "The Octocat",
+  "bio": "GitHub mascot",
+  "website": "https://github.blog",
+  "location": "San Francisco",
+  "followers": 1234,
+  "following": 567,
+  "avatar": "https://avatars.githubusercontent.com/u/583231?v=4",
+  "response_time": "9ms"
+}
+```
+
+---
+
+### **7. 8Ball Magic Ball**  
+Get random answers to your questions.  
+
+**Endpoint:**  
+`GET /v1/8ball`  
+
+**Example Request URL:**  
+`https://api.qeintech.in/v1/8ball`  
+
+**Response (JSON):**  
+```json
+{
+  "success": true,
+  "answer": "Yes, absolutely!",
+  "response_time": "2ms"
+}
+```
+
+---
+
+### **8. Dice Roll**  
+Simulate rolling a dice.  
+
+**Endpoint:**  
+`GET /v1/dice`  
+
+**Example Request URL:**  
+`https://api.qeintech.in/v1/dice`  
+
+**Response (JSON):**  
+```json
+{
+  "success": true,
+  "result": 5,
+  "response_time": "1ms"
+}
+```
+
+---
+
+### **9. Translation**  
+Translate text into a target language.  
+
+**Endpoint:**  
+`POST /v1/translate`  
+
+**Request Body (JSON):**  
+```json
+{
+  "text": "hello",
+  "language": "hi"
+}
+```  
+
+**Example Request URL:**  
+`https://api.qeintech.in/v1/translate`  
+
+**Response (JSON):**  
+```json
+{
+  "success": true,
+  "text": "hello",
+  "translation": "नमस्ते",
+  "language": "hi",
+  "response_time": "1418ms"
+}
+```
+
+---
+
+### **10. Random Meme**  
+Fetch a random meme from Reddit.  
+
+**Endpoint:**  
+`GET /v1/meme`  
+
+**Example Request URL:**  
+`https://api.qeintech.in/v1/meme`  
+
+**Response (JSON):**  
+```json
+{
+  "success": true,
+  "title": "When you realize it's already Monday",
+  "url": "https://i.redd.it/xyz123abc.jpg",
+  "subreddit": "memes",
+  "response_time": "742ms"
+}
+```
