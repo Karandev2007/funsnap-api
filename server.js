@@ -10,12 +10,15 @@ const jokeRoutes = require('./routes/jokes')
 const quoteRoutes = require('./routes/quotes')
 const factRoutes = require('./routes/facts')
 const text2speechRoutes = require('./routes/text2speech');
+const githubRoutes = require('./routes/github');
+const eightBallRoutes = require('./routes/8ball');
+const diceRoutes = require('./routes/dice');
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 // all routes together
-const routes = [jokeRoutes, quoteRoutes, factRoutes, imageRoutes];
+const routes = [jokeRoutes, quoteRoutes, factRoutes, imageRoutes, githubRoutes, eightBallRoutes, diceRoutes];
 routes.forEach(route => app.use('/', route));
 
 // text2speech route
