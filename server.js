@@ -14,12 +14,13 @@ const githubRoutes = require('./routes/github');
 const eightBallRoutes = require('./routes/8ball');
 const diceRoutes = require('./routes/dice');
 const translateRoutes = require('./routes/translate');
+const memeRoutes = require('./routes/meme');
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 // all routes together
-const routes = [jokeRoutes, quoteRoutes, factRoutes, imageRoutes, githubRoutes, eightBallRoutes, diceRoutes, translateRoutes];
+const routes = [jokeRoutes, quoteRoutes, factRoutes, imageRoutes, githubRoutes, eightBallRoutes, diceRoutes, translateRoutes, memeRoutes];
 routes.forEach(route => app.use('/', route));
 
 // text2speech route

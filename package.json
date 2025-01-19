@@ -58,6 +58,7 @@
     "qs": "^6.13.0",
     "range-parser": "^1.2.1",
     "raw-body": "^2.5.2",
+    "reddit-image-fetcher": "^2.0.12",
     "safe-buffer": "^5.2.1",
     "safer-buffer": "^2.1.2",
     "say": "^0.16.0",
