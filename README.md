@@ -3,3 +3,5 @@
 # LumiAPI
 
 LumiAPI is an open-sourced, fast, and reliable API for developers to easily integrate text-to-speech, jokes, quotes, facts, and image retrieval into their applications. 
+
+LumiAPI Documentation: https://api-docs.qeintech.in
